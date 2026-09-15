@@ -1,0 +1,23 @@
+<!-- 1. 読み込み回数をカウントしてリダイレクトするJavaScript -->
+<script>
+  let loadCount = 0;
+  function checkSubmit() {
+    loadCount++;
+    // 2回目の読み込み（送信完了画面の表示）を検知したら遷移する
+    if (loadCount === 2) {
+      // ★↓ ここに回答後に飛ばしたいURLを入力してください ↓★
+      window.location.href = "https://sites.google.com/view/toge-gacha/%E3%83%9B%E3%83%BC%E3%83%A0"; 
+    }
+  }
+</script>
+
+<!-- 2. Googleフォームの埋め込みコード（onload="checkSubmit()" を追加済み） -->
+<iframe 
+  src="https://docs.google.com/forms/d/e/1FAIpQLSdqtT67V-cm44eymJ0AIFfEFxqVo_5KCpLGKp4px0pbdZIeog/viewform?embedded=true" 
+  width="640" 
+  height="3199" 
+  frameborder="0" 
+  marginheight="0" 
+  marginwidth="0"
+  onload="checkSubmit()"
+>読み込んでいます…</iframe>
